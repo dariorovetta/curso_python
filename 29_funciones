@@ -1,0 +1,34 @@
+# FUNCIONES
+# Una función es un bloque de código que incluye instrucciones para realizar
+# una tarea especifica
+
+
+# def se utiliza para definir una función
+# def saludar_usuario(nombre, edad):
+#   print("Hola " + nombre + " tienes " + edad)
+#   print("Primero")
+#   print("Ultimo")
+#   print("Adios")
+
+
+# saludar_usuario("Marcos", "35")  # Llamamos a la función, que seria nombrarla
+
+# FUNCIONES LAMBDA
+# Son funciones anónimas que se ejecutan en una línea es decir
+# solo pueden tener una expresión
+
+# resultado = lambda numero: numero + 20
+# suma = lambda numero1, numero2: numero1 + numero2
+
+# print(resultado(30))
+# print(suma(30, 60))
+
+# RETURN
+# La declaración Return nos permite recibir datos de una función
+
+# def multiplicar(num1, num2):
+    # return num1 * num2
+    # return siempre va a ser la ultima línea de su función
+
+
+# print(multiplicar(2, 5))
