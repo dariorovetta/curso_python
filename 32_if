@@ -1,0 +1,88 @@
+# DECLARANDO IF (CONDICIONALES)
+# Esta declaración condicional nos permite realizar una
+# acción si una condición se cumple u otra acción en caso de que no se cumpla
+
+"""
+EJEMPLO REAL:
+Voy a salir,
+
+SI hace calor,
+    saldré en camiseta
+
+SINO SI hace frio,
+    saldré abrigado
+
+SINO SI está lloviendo,
+    llevaré paraguas
+
+SINO
+    me quedaré en casa
+"""
+
+# si_es_hombre = False
+# eres_alto = True
+
+"""
+print("Antes del IF\n")
+
+if si_es_hombre and eres_alto:  # if = SI en ingles
+    print("Eres un hombre alto")  # si el if se cumple el resto lo saltea
+elif si_es_hombre and not eres_alto:  # elif = SINO SI en Python
+    print("Eres un hombre bajo")
+elif not si_es_hombre and eres_alto:
+    print("No eres un hombre, pero eres alto")
+else:  # else = SINO en ingles
+    print("No eres un hombre, y tampoco eres alto")
+
+print("\nFuera del IF")
+"""
+
+# PRUEBAS CON OR
+
+"""
+si_es_mujer = False
+eres_hombre = False
+eres_no_binario = False
+
+print("Antes del IF\n")
+
+if si_es_mujer or eres_hombre or eres_no_binario:  # OR solo es FALSA si ambas son False
+    print("Eres una persona")
+else:
+    print("No eres una persona")
+
+print("\nDespués del IF")
+"""
+
+# UTILIZAMOS CONDICIONALES Y COMPARADORES
+
+""" 
+COMPARACIÓN DE SI ES MAYOR O MENOR DE EDAD
+def mayor_edad(num):
+    if num >= 18:
+        return True
+    else:
+        return False
+
+
+edad = input("Ingresa tu edad: ")
+
+if mayor_edad(int(edad)):
+    print("Eres mayor de edad")
+else:
+    print("Eres menor de edad")
+"""
+
+"""
+COMPARACIÓN ENTRE 3 NUMEROS, Y ELEGIR EL MAYOR
+def mayor_numero(n1, n2, n3):
+    if n1 >= n2 and n1 >= n3:
+        return n1
+    if n2 >= n1 and n2 >= n3:
+        return n2
+    else:
+        return n3
+
+numero = mayor_numero(99, 556, 300)
+print(numero)
+"""
