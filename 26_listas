@@ -1,0 +1,75 @@
+# LISTAS
+# Una lista es una colección de elementos, las listas están ordenadas, y son mutables.
+
+# frutas = ["Naranja", "Manzana", "Banana", "Kiwi", "Mandarina", "Uva"]
+
+# print(frutas)
+# print(frutas[0])  # De adelante hacia atrás se cuenta del 0, 1, 2, 3, etc.
+# print(frutas[-2])  # De atrás hacia adelante se cuenta del -1, -2, -3 etc.
+# print(frutas[1:])
+# Utilizando los ":" después del número, se imprime desde adelante hacia atrás incluyendo al número
+# print(frutas[:5])
+# Utilizando los ":" antes del número, se imprime desde atrás hacia delante sin incluir al número.
+# print(frutas[1:5])
+# Utilizando los ":" antes y después de los números,
+# se imprime la parte intermedia que incluye a ambos parámetros.
+
+numeros = [5, 2, 23, 55, 1, 9, 6]
+frutas = ["Naranja", "Manzana", "Banana", "Kiwi", "Mandarina", "Uva", "Naranja"]
+print("LISTA ORIGINAL DE FRUTAS:")
+print(frutas)
+
+# FUNCIONES DE LAS LISTAS
+# list, len, append, extend, insert, remove, clear, pop, index, count, sort, reverse, copy
+
+# Para reemplazar un valor de la lista se hace asi
+# frutas[1] = "Piña"  # Se reemplaza manzana por piña
+
+# list se utiliza para crear una lista
+# lista = list (("hola", "adios", 5))
+# print(lista)
+
+# len se utiliza para averiguar el largo de una lista
+# print(len(frutas))
+
+# append se utiliza para agregar un elemento a la lista
+# frutas.append("Piña")
+# print(frutas)
+
+# extend se utiliza para agregar una lista a otra
+# numeros.extend(frutas)
+# print(numeros)
+
+# insert se utiliza para incluir datos en una lista en un lugar en especifico
+# frutas.insert(2, "frutilla")
+# print(frutas)
+
+# remove se utiliza para eliminar un elemento de una lista
+# frutas.remove("Kiwi")
+# print(frutas)
+
+# clear se utiliza para borrar todos los elementos de la lista
+# frutas.clear()
+# print(frutas)
+
+# pop se utiliza para borrar el último elemento de la lista
+# frutas.pop()
+# print(frutas)
+
+# index se utiliza para localizar el índice un elemento de la lista
+# print(frutas.index("Mandarina"))
+
+# count se utiliza para contar cuantas veces aparece un elemento en la lista
+# print(frutas.count("Naranja"))
+
+# sort se utiliza para ordenarlas por orden alfabético
+# numeros.sort()
+# print(numeros)
+
+# reverse se utiliza para dar vuelta una lista
+# numeros.reverse()
+# print(numeros)
+
+# copy se utiliza para dar una copia exacta de una lista
+# frutas2 = frutas.copy()
+# print(frutas2)
