@@ -1,0 +1,75 @@
+# TRABAJANDO CON CADENAS DE TEXTO
+
+# Las cadenas pueden tratarse como listas
+cadena = "Hola AcademiaCoder"
+
+# H o l a   A c a d e  m  i  a  C  o  d  e  r
+# 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+
+letra = cadena[5]
+# print(letra)
+
+letra1 = cadena[-18]
+# print(letra1)
+
+letras = cadena[2:13]  # imprime desde el primer número al anterior al último
+# print(letras)
+
+letras2 = cadena[:5]  # Al escribir los dos puntos primero arranca a imprimir desde el principio
+# print(letras2)
+
+# Las listas son mutables, las cadenas no.
+
+# FUNCIONES DE LAS CADENAS DE TEXTO
+# Tienen todas las funciones en https://docs.python.org/3/library/sdptypes.html#string-methods
+
+modificada = cadena.capitalize()  # Pone mayúscula solo a la primera letra, el resto en minúscula
+# print(modificada)
+
+modificada2 = cadena.lower()  # Todas las letras se pasan a minúscula
+# print(modificada2)
+
+modificada3 = cadena.upper()  # Todas las letras se pasan a mayúscula
+# print(modificada3)
+
+modificada4 = cadena.isupper()  # Pregunta si la cadena de texto está escrita en mayúscula
+# print(modificada4)
+
+modificada5 = cadena.split()  # Separa las palabras según los espacios
+# print(modificada5)
+
+cadena_con_comas = "Marcos, Natalia, Tiziana, Benicio"
+lista_nombres = cadena_con_comas.split(",")  # Se le indica que separe según las comas
+# print(lista_nombres)
+
+
+# UNIENDO VARIABLES Y CADENAS
+alumnos = 2500
+academia = "AcademiaCoder"
+
+cadena = "Los " + str(alumnos) + " alumnos de " + academia + " son muy aplicados"
+# print(cadena)
+
+# .format (remplaza los valores de la cadena, según las variables seleccionadas)
+cadena1 = "Los {} alumnos de {} son muy aplicados".format(alumnos, academia)
+# print(cadena1)
+
+cadena2 = "Los {a} alumnos de {b} son muy aplicados".format(a=alumnos, b=academia)
+# print(cadena2)
+
+# Al poner la "f" al principio de la cadena, y asignando los valores
+# entre llaves se obtiene el mismo resultado
+cadena3 = f"Los {alumnos} alumnos de {academia} son muy aplicados"
+# print(cadena3)
+
+# INTRODUCIR TEXTO POR TECLADO
+# la función de python que nos permite introducir texto es input()
+
+# print("Ingresa tu Nombre:")
+# nombre = input()
+# print(f"El alumno se llama {nombre}")
+
+# Otra forma más sencilla seria asi
+# nombre = input("Ingresa tu Nombre: ")
+# print(f"El alumno se llama {nombre}")
+
