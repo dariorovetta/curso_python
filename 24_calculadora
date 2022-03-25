@@ -1,0 +1,25 @@
+# CALCULADORA BÁSICA - PROYECTO NÚMERO 1
+# Solicitar al usuario 2 números y realizar la suma de ellos
+
+# Declaramos las variables
+# Utilizamos input para que se guarde lo que el usuario ingresa
+numero1 = input("Ingresa un número: ")
+numero2 = input("Ingresa otro número: ")
+# Los datos que ingresan por input son del tipo "String"
+
+# Realizamos la suma y guardamos el resultado
+suma = float(numero1) + float(numero2)
+resta = float(numero1) - float(numero2)
+multiplicacion = float(numero1) * float(numero2)
+division = float(numero1) / float(numero2)
+
+# Imprimimos el resultado y un mensaje de despedida
+print("La suma es:", suma)
+print("La resta es", resta)
+print("La multiplicación es", multiplicacion)
+print("La division es", division)
+print("Gracias!")
+
+# TAREA PARA EL ESTUDIANTE
+# Agregar a la calculadora el resto de las operaciones aritméticas
+# disponibles en Python y mostrar en pantalla todos los resultados.
