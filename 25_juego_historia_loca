@@ -1,0 +1,54 @@
+# JUEGO HISTORIA LOCA
+# https://www.educandolectores.es/2018/07/02/mad-libs-o-historias-locas-un-juego-de-palabras-muy-divertido/
+
+# Declaramos las variables
+# utilizando input para que el usuario ingrese lo que pedimos
+
+print("Crea tu historia loca")
+print("Ingresa las palabras que te solicitamos:\n")
+pal1 = input("Parte del cuerpo en plural")
+pal2 = input("Adjetivo en plural (masculino)")
+pal3 = input("Adjetivo (masculino)")
+pal4 = input("Adjetivo (masculino)")
+pal5 = input("Lugar")
+pal6 = input("Animal")
+pal7 = input("Parte del cuerpo")
+pal8 = input("Adjetivo")
+pal9 = input("Adjetivo en plural (femenino)")
+pal10 = input("Adverbio")
+pal11 = input("Interjección")
+pal12 = input("Adjetivo plural (femenino)")
+pal13 = input("Nombre propio")
+pal14 = input("Nombre (femenino)")
+
+print("\nESTA ES LA HISTORIA QUE HAS CREADO:")
+# Imprimimos la historia por pantalla
+print(f"Antiguamente, el ser humano caminaba en cuatro {pal1},")
+print(f"se expresaba mediante gruñidos {pal2} y no sabia encender")
+print(f"un {pal3} fuego. Esta es la historia del dia en que la humanidad")
+print(f"cambió para siempre (traducida del {pal4} idioma de las cavernas):\n")
+# TAREA PARA EL ESTUDIANTE: COMPLETAR LA HISTORIA O INVENTAR UNA NUEVA
+
+print("Hombre de las cavernas 1:")
+print(f"En esta cueva hace mas frio que en (en/la) {pal5} .")
+print(f"Incluso con la piel del/de la {pal6} más caliente no")
+print(f"consigo que mi {pal7} deje de tiritar.\n")
+
+print("Hombre de las cavernas 2:")
+print("Si al menos pudiésemos encontrar una manera de que")
+print(f"el frio fuera más {pal8}\n")
+
+print("Hombre de las cavernas 1:")
+print(f"Estoy aburrido. Creo que voy a jugar un rato con estas ramas {pal9}\n")
+
+print("Hombre de las cavernas 2:")
+print(f"¿Por qué no la frotas {pal10} a ver que pasa?\n")
+
+print("Hombre de las cavernas 1:")
+print(f"¡{pal11}! ¡Esta saliendo humo de las {pal12} ramas!\n")
+
+print("Hombre de las cavernas 2:")
+print(f"¡Ay! ¡Esta caliente! ¡Por el amor de {pal13.capitalize()}, hemos conseguido calor!\n")
+
+print("Hombres de las cavernas 1:")
+print(f"A partir de ahora, llamaremos fuego a esta {pal14.capitalize()} magica")
