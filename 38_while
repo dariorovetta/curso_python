@@ -1,0 +1,15 @@
+# BUCLE WHILE
+# El bucle while nos permite ejecutar una acción repetidas veces
+# mientras una condición no se cumpla
+
+# WHILE = Mientras en (ingles)
+
+i = 1
+
+while i <= 5:
+    print(i)
+    i += 1
+
+print("Termino el bucle")
+
+print(i)
