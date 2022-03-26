@@ -1,0 +1,15 @@
+# CONJUNTOS
+# Los conjuntos son una colección de datos, pero que no se encuentra ordenada.
+
+# [] Listas - () Tuplas - {} Conjuntos y Diccionarios
+
+conjunto = {"Hola", 2, False, 48.0, True, True}
+# Si se repiten no los imprime
+print(conjunto)
+# No se puede acceder al indice con [], porque no existe
+
+conjunto.add(88)  # Si se puede agregar datos
+print(conjunto)
+
+conjunto.remove(False)  # Se puede eliminar datos
+print(conjunto)
