@@ -1,0 +1,32 @@
+# DICCIONARIOS
+# Los diccionarios son una colección de datos no ordenada, pero que
+# almacena sus datos utilizando una asignación (llave, valor).
+
+# [] Listas - () Tuplas - {} Conjuntos y diccionarios
+
+dias = {
+    "lun": "Lunes",
+    "mar": "Martes",
+    "mir": "Miércoles",
+    "jue": "Jueves",
+    "vie": "Viernes",
+    "sab": "Sábado",
+    "dom": "Domingo",
+}
+print(dias["mar"])
+# .get se utiliza para generar un mensaje cuando se pone un valor que no existe
+print(dias.get("lll", "El identificador no existe"))
+
+# .pop elimina el valor seleccionado
+print(dias.pop("mar"))
+print()
+print(dias)
+
+# .popitem borra el último valor del diccionario y nos lo da entre paréntesis
+print(dias.popitem())
+print()
+print(dias)
+
+# .update modifica el valor de una definición
+dias.update(lun="Dario")
+print(dias)
