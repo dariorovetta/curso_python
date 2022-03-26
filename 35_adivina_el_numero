@@ -1,0 +1,45 @@
+# ADIVINA EL NÚMERO 1.0
+# Del uno al 10, con tres intentos
+
+import random
+
+adivina = random.randint(1, 10)
+
+print("Hola, como te llamas?")
+nombre = input()
+
+print("\nMuy bien " + nombre + " estoy pensando un número entre 1 y 10, intenta adivinarlo")
+print("A propósito, solo tienes 3 intentos")
+
+
+num = int(input("Intenta adivinar: "))
+
+if num == adivina:
+    print("\nGANASTE!")
+else:
+    if num > adivina:
+        print("\nIntenta con un número más pequeño")
+    else:
+        print("\nIntenta con un número más grande")
+
+    print("\nTe quedan 2 intentos")
+
+    num = int(input("Intenta otra vez: "))
+
+    if num == adivina:
+        print("\nGANASTE!")
+    else:
+        if num > adivina:
+            print("\nIntenta con un número más pequeño")
+        else:
+            print("\nIntenta con un número más grande")
+
+        print("\nTe queda 1 intento")
+
+        num = int(input("Intenta otra vez: "))
+
+        if num == adivina:
+            print("\nGANASTE!")
+        else:
+            print("\nLo siento, has perdido")
+            print("El número correcto era " + str(adivina))
