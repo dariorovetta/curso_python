@@ -1,0 +1,61 @@
+# FOR
+# Nos permite recorrer una colección de valores
+
+# for = por en (ingles)
+
+# El for va cambiando de valor cada vez que se ejecuta el bucle
+# en este caso va a asignándole a "letra" cada letra de la palabra
+# AcademiaCoder en orden. Cuando termina, a "letra" le queda asignada
+# la última letra de la palabra. En este caso "r"
+
+"""
+for letra in "AcademiaCoder":
+    print(letra, id(letra))
+
+
+print(letra)
+print(id(letra))
+"""
+
+# Al utilizar una [Lista] en el for, este va imprimiendo cada
+# valor de la lista en orden
+
+"""
+dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]
+
+for dia in dias:
+    print(dia)
+"""
+
+# Al utilizar {Diccionarios} en el for, esta va imprimiendo
+# las llaves, no los valores de cada una.
+
+"""
+meses = {"En": "Enero", "Fe": "Febrero", "Ma": "Marzo"}
+
+for mes in meses:
+    print(mes)
+"""
+# Utilizando la variable .item() podemos seleccionar que queremos
+# obtener, si la llave o el valor
+
+"""
+meses = {"En": "Enero", "Fe": "Febrero", "Ma": "Marzo"}
+
+for llave, valor in meses.items():
+    print(valor)
+    
+# La selección se hace en el print, poniendo llave o valor
+"""
+
+# range = rango en (ingles)
+
+"""
+meses = {"En": "Enero", "Fe": "Febrero", "Ma": "Marzo"}
+
+for indice in range(2, 5):  # imprime entre el segundo y quinto valor
+    print(indice)
+
+
+print(range(2, 5))
+"""
