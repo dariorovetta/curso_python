@@ -1,0 +1,49 @@
+# SENTENCIAS BREAK Y CONTINUE
+
+# Las sentencias break y continue nos permiten manejas el flujo
+# de la información en un bucle
+
+dias = [
+    "lunes",
+    "martes",
+    "miércoles",
+    "jueves",
+    "viernes",
+    "sábado",
+    "domingo"
+]
+
+# BREAK
+
+"""
+for indice in range(10):
+    if indice == 4:
+        break
+    print(indice)
+"""
+
+# Si el print está abajo del IF y el BREAK se imprime hasta el rango 4.
+# Si el print está arriba del IF y el BREAK se imprime hasta el rango 5.
+
+# CONTINUE
+
+"""
+for indice in range(10):
+    if indice == 4:
+        continue
+    print(indice)
+"""
+
+# Si el print está abajo del IF y CONTINUE, no se imprime el rango 4.
+# Si el print está arriba del IF y CONTINUE, si se imprime el rango 4.
+
+# Se pueden utilizar los valores de una lista
+
+for dia in dias:
+    if dia == "jueves":
+        continue
+    print(dia)
+
+
+# Con BREAK deja de imprimir el valor seleccionado
+# Con CONTINUE imprime los valores menos el seleccionado
