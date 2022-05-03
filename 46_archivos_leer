@@ -1,0 +1,54 @@
+# ARCHIVOS (de texto)
+
+# Abrir y Cerrar archivos
+
+# open se utiliza para abrir archivos de Python
+
+# r = read = "leer" en (ingles), abierto para lectura
+# w = write = "escribir" en (ingles), abierto para escritura
+# a = append = "adjuntar" en (ingles), añadiendo al final del fichero existente
+# r+ = Nos permite leer y escribir
+# w+ = Nos permite escribir y leer
+
+"""
+Ejemplo
+
+archivo_estudiantes = open("estudiantes.txt", "r") # Asi abrimos
+print(archivo_estudiantes)
+archivo_estudiantes.close() # Asi cerramos
+"""
+
+# Leer archivos
+
+archivo_estudiantes = open("estudiantes.txt", "r")  # Asi abrimos
+
+"""
+print(archivo_estudiantes.readable())
+print()
+# readable() nos permite saber si un archivo es legible
+# Si el valor asignado es distinto a r o r+, readable() muestra False
+"""
+
+"""
+print(archivo_estudiantes.read())
+print()
+# read() nos devuelve el contenido completo que tiene el archivo
+"""
+
+"""
+print(archivo_estudiantes.readline())
+print()
+# readline() nos devuelve la primer linea que tiene el archivo
+"""
+
+for est in archivo_estudiantes:
+    print(est)
+# Si lo muestra como un array, entonces podemos recorrerlo con un for
+print(archivo_estudiantes.readlines())
+print()
+# readlines() nos devuelve lo que tiene el archivo en formato lista
+# y de esa forma se puede acceder a alguno en específico
+
+# Una vez que el contenido fue abierto, ya dentro del archivo no queda nada
+
+archivo_estudiantes.close()  # Asi cerramos
