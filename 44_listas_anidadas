@@ -1,0 +1,22 @@
+# LISTAS ANIDADAS o LISTAS DE 2 DIMENSIONES
+
+grilla_numeros = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [0]
+]
+print(grilla_numeros[0][2])  # = al número 3
+# [0][2] representa a la fila 1, columna 3 respectivamente
+print(grilla_numeros[1][1])  # = al número 5
+
+print(grilla_numeros[2][0])  # = al número 7
+
+# Para que nos devuelva todas las listas hacemos:
+for num in grilla_numeros:
+    print(num)
+
+# Para recorrer todos los números en orden
+for fila in grilla_numeros:
+    for col in fila:
+        print(col)
