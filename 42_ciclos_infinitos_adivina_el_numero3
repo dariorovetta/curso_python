@@ -1,0 +1,54 @@
+# VERSIÓN 2.0 DE ADIVINA EL NÚMERO
+
+import random
+
+# Variables para modificar el juego
+posibilidades = 6
+limite = 20
+
+print("Hola, ¿Cómo te llamas?")
+nombre = input()
+
+while True:
+    print("Muy bien " + nombre + " estoy pensando un número entre el 1 y el " + str(limite))
+    print("intenta adivinarlo, pero tienes " + str(posibilidades) + " posibilidades\n")
+
+    # Generamos un número aleatorio entre 1 y 20
+    adivina = random.randint(1, limite)
+
+    # Hacemos el juego con bucles
+
+    intentos = 0  # Son los intentos que va haciendo la persona que adivina
+
+    while intentos < posibilidades:
+
+        num = int(input("Intenta adivinar: "))
+
+        if num == adivina:
+            print("\n¡GANASTE!")
+            break
+
+        else:
+            intentos += 1
+
+            if intentos < posibilidades and num > adivina:
+                print("\nIntenta con un número más pequeño")
+
+            elif intentos < posibilidades and num < adivina:
+                print("\nIntenta con un número más grande")
+
+            else:
+                print("\nLo siento, has perdido")
+                print("El número correcto era " + str(adivina))
+    print()
+
+    print("\nIngresa (1) para volver a jugar")
+    print("Ingresa (2) para detener")
+    opcion = input(">")
+
+    if opcion == "1":
+        print("¡SUERTE!")
+        print("---o---")
+    if opcion == "2":
+        print("GRACIAS, has finalizado el juego")
+        break
