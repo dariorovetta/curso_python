@@ -1,0 +1,53 @@
+# TRATANDO CON ERRORES EN PYTHON
+# try...except...else...finally
+
+
+"""
+try:  # try = Que intente ejecutar
+    num1 = float(input("Ingresa un número: "))
+    num2 = 0
+    print(num1)
+    print(num1 / num2)
+except ZeroDivisionError:
+# Error por dividir por 0
+    print("No puedes dividir entre 0")
+except ValueError:
+# Se recibe cuando una operación recibe un argumento que tiene un valor inapropiado
+    print("Entrada invalida, debe ser un entero")
+
+print("Hola AcademiaCoder")
+"""
+
+
+try:  # try = Que intente ejecutar
+
+    num1 = float(input("Ingresa un número: "))
+    num2 = 2
+    print(num1)
+    print(num1 / num2)
+
+except ZeroDivisionError as err:
+    print(err)
+except ValueError as err:
+    print(err)
+# Al utilizar "as err" nos imprime el mensaje de error que python tiene
+
+# Podemos utilizar "else:" y se va a ejecutar siempre que no haya error
+else:
+    print("No hubo ningún error")
+# Podemos utilizar "finally" y se va a ejecutar siempre, haya errores o no
+finally:
+    print("Se ejecuta siempre sin importar que pase")
+
+"""
+De esta forma el programa deja de funcionar cuando encuentra un error
+num1 = int(input("Ingresa un número: "))
+num2 = 0
+print(num1)
+print(num1 / num2)
+print("Entrada invalida, debe ser un entero")
+
+print("Hola AcademiaCoder")
+"""
+
+
