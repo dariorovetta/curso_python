@@ -1,0 +1,17 @@
+# ARCHIVOS (de texto)
+
+# Escribir archivos
+
+archivo_estudiantes = open("estudiantes.txt", "a")  # Asi abrimos un archivo
+
+print(archivo_estudiantes.writable())
+# writable() archivo escribible, tiene permiso de escritura
+
+print(archivo_estudiantes.write("\nCarolina Massutti - ReactJS"))
+# write() nos permite crear un archivo con texto que queramos
+# esto si está asignado la "w" de write
+# si está asignado la "a" de append, se lo agrega al archivo existente
+
+# Antes de agregar texto a un archivo, hay que ver la estructura para no romperlo
+
+archivo_estudiantes.close()  # Asi cerramos un archivo
