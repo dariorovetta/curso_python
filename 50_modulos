@@ -1,0 +1,25 @@
+import utilidades_extra as ue
+
+# Se le puede asignar otro nombre al módulo con "as"
+# as = como en (ingles)
+
+"""
+Si quisiéramos solo importar una función en específico, se hace asi
+
+from utilidades_extra import tirar_dado
+
+from = "de" en (ingles)
+"""
+
+# MODULOS
+
+# Un módulo es un archivo que podemos importar dentro de un archivo en el cual
+# estamos trabajando y hacer uso de su contenido, como funciones y variables.
+
+# Se utilizan funciones de otros archivos importando el mismo
+
+print(ue.metros_en_kilometro)
+
+print(ue.tirar_dado(6))
+
+print(ue.super_heroes[1])
