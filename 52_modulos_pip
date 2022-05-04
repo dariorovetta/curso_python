@@ -1,0 +1,8 @@
+from docx import Document
+
+# MODULOS "PIP"
+
+# PIP
+# Gestor de paquetes, gestor de módulos o librerías creadas por terceros.
+
+document = Document
