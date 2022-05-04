@@ -1,0 +1,11 @@
+datos = ["02", "04", "08", "14", "16", "25", "31", "40", "53", "86"]
+
+print(datos[7])
+
+print(datos[(0 + 9) // 2])
+
+print(datos[(5 + 9) // 2])
+
+# La búsqueda binaria agarra el primer índice y el último indice, los suma y los divide por dos.
+# La búsqueda lineal va buscando desde el primer índice al último
+
