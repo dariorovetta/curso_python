@@ -1,0 +1,17 @@
+# ARCHIVOS (de texto)
+
+# Eliminar un archivo
+
+archivo_estudiantes = open("estudiantes.txt", "a")  # Asi abrimos un archivo
+print(archivo_estudiantes.write("\nCarolina Massutti - ReactJS"))
+archivo_estudiantes.close()  # Asi cerramos un archivo
+
+import os  # se importa el módulo "os" para hacer otras funciones
+
+try:
+    os.remove("estudiantes2.txt")
+    # De esta forma se eliminó el archivo
+except FileNotFoundError as err:
+    print(err)
+
+# Con "try:" y "except" anulamos el error que presentaba
