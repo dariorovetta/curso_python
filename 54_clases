@@ -1,0 +1,41 @@
+# CLASES Y OBJETOS
+
+"""
+
+class Estudiante:
+    def __init__(self, nombre, edad, curso_inicial):  # self = "como uno mismo" en (ingles)
+        self.nombre = nombre
+        self.edad = edad
+        self.curso_inicial = curso_inicial
+        self.esta_activo = True
+        self.cursos = [curso_inicial]
+
+
+estudiante1 = Estudiante("Dario", 27, "Python")
+
+estudiante1.edad = 36  # Se puede modificar algún dato de la clase, de esta forma
+
+print(estudiante1.nombre)
+
+"""
+
+
+# Clase de prueba
+
+class Vehiculo:
+    def __init__(self, tipo, marca, modelo, ano, color):
+        self.tipo = tipo
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.color = color
+
+
+vehiculo1 = Vehiculo("Auto", "Peugeot", "207", "2013", "Azul")
+vehiculo2 = Vehiculo("Auto", "Ford", "Escort", "1999", "Gris")
+vehiculo3 = Vehiculo("Auto", "Fiat", "Palio", "2015", "Gris")
+vehiculo4 = Vehiculo("Camioneta", "Peugeot", "2008", "2018", "Gris")
+vehiculo5 = Vehiculo("Camioneta", "Hyundai", "Creta", "2017", "Gris")
+
+print(vehiculo4.tipo)
+print(vehiculo1.marca)
