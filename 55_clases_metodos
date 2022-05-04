@@ -1,0 +1,50 @@
+# CLASES Y MÉTODOS
+
+class Estudiante:
+    def __init__(self, nombre, edad, cursos_inicial):  # self = "como uno mismo" en (ingles)
+        self.nombre = nombre
+        self.edad = edad
+        self.cursos_inicial = [cursos_inicial]
+        self.esta_activo = True
+
+    def desactivar(self):
+        self.esta_activo = False
+
+    def agregar(self, curso):
+        self.cursos_inicial.append(curso)
+
+    def quitar(self, quitar_curso):
+        self.cursos_inicial.remove(quitar_curso)
+
+
+estudiante1 = Estudiante("Dario", "27", "Python")
+
+# print(estudiante1.esta_activo)
+
+estudiante1.desactivar()
+
+# print(estudiante1.esta_activo)
+
+curso1 = input("Agrega el primer curso:\n>")
+curso2 = "Java"
+curso3 = "HTML"
+
+estudiante1.agregar(curso1)
+estudiante1.agregar(curso2)
+estudiante1.agregar(curso3)
+
+print("\nTodos los cursos")
+print(estudiante1.cursos_inicial)
+
+curso4 = "HTML"
+
+estudiante1.quitar(curso4)
+
+print("\nLos cursos que quedaron")
+print(estudiante1.cursos_inicial)
+
+
+# TAREA PARA EL ESTUDIANTE.
+# Crear 2 métodos:
+# 1 que permita añadir cursos a los que el estudiante se ha inscripto
+# 2 y otro método que permita eliminar cursos del estudiante
