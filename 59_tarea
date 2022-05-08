@@ -1,0 +1,140 @@
+from utilidades_extra import tirar_dado
+from utilidades_extra import Pokemon  # Clase desde otro módulo
+# JUEGO DE POKEMON
+
+# Creamos nuestros Pokemon
+p1 = Pokemon("Pikachu", 30, "Eléctrico", 0)
+p2 = Pokemon("Squirtle", 30, "Agua", 0)
+p3 = Pokemon("Charmander", 30, "Fuego", 0)
+p4 = Pokemon("Diglett", 30, "Tierra", 0)
+
+
+def elegir_pokemon1(pk1, pk2, pk3, pk4):
+    print(f"Elige tu pokemon 1.{pk1.nombre}, 2.{pk2.nombre}, 3.{pk3.nombre}, 4.{pk4.nombre}")
+    opcion = int(input(""))
+    if opcion == 1:
+        j1 = pk1
+        print(f"Has elegido {pk1.nombre}")
+    elif opcion == 2:
+        j1 = pk2
+        print(f"Has elegido {pk2.nombre}")
+    elif opcion == 3:
+        j1 = pk3
+        print(f"Has elegido {pk3.nombre}")
+    elif opcion == 4:
+        j1 = pk4
+        print(f"Has elegido {pk4.nombre}")
+
+    return j1
+
+
+def elegir_pokemon2(pk1, pk2, pk3, pk4):
+    print(f"Elige tu Pokemon 2.{pk1.nombre}, 2.{pk2.nombre}, 3.{pk3.nombre}, 4.{pk4.nombre}")
+    opcion = int(input(""))
+    if opcion == 1:
+        j2 = pk1
+        print(f"Has elegido {pk1.nombre}")
+    elif opcion == 2:
+        j2 = pk2
+        print(f"Has elegido {pk2.nombre}")
+    elif opcion == 3:
+        j2 = pk3
+        print(f"Has elegido {pk3.nombre}")
+    elif opcion == 4:
+        j2 = pk4
+        print(f"Has elegido {pk4.nombre}")
+
+    return j2
+
+
+def dano1(j1, j2):
+    if j1.tipo == "Agua" and j2.tipo == "Fuego":
+        j1.ataque = j1.ataque * 1.2
+    elif j1.tipo == "Fuego" and j2.tipo == "Agua":
+        j1.ataque = j1.ataque * 0.8
+    elif j1.tipo == "Eléctrico" and j2.tipo == "Tierra":
+        j1.ataque = j1.ataque * 0.8
+
+
+def dano2(j1, j2):
+    if j2.tipo == "agua" and j1.tipo == "Fuego":
+        j2.ataque = j2.ataque * 1.2
+    elif j2.tipo == "Fuego" and j1.tipo == "Agua":
+        j2.ataque = j2.ataque * 0.8
+    elif j2.tipo == "Eléctrico" and j1.tipo == "Tierra":
+        j2.ataque = j2.ataque * 0.8
+
+
+def juego():
+    while True:
+
+        # Inicializamos los valores y el turno
+        j1 = elegir_pokemon1(p1, p2, p3, p4)
+        j2 = elegir_pokemon2(p1, p2, p3, p4)
+        turno = tirar_dado(2)
+        j1.vida = 100
+        j2.vida = 100
+        dano1(j1, j2)
+        dano2(j1, j2)
+
+        while j1 == j2:
+            print("\n¡Opción Invalida!\n")
+            j1 = elegir_pokemon1(p1, p2, p3, p4)
+            j2 = elegir_pokemon2(p1, p2, p3, p4)
+
+        print("¡Se ha iniciado la Batalla!\n")
+        print(f"{j1.nombre} se enfrenta a {j2.nombre}\n")
+        # La letra f al inicio se utiliza para extraer los valores de las llaves
+
+        # Creamos el ciclo mientras
+        while j1.vida > 0 and j2.vida > 0:
+            if turno == 1:
+                j2.vida = j2.vida - j1.ataque
+                turno = 2
+                print(f"{j1.nombre} ataca, {j2.nombre} ahora tiene {j2.vida} de vida")
+                if j2.vida > 0:
+                    print("\n===PROXIMA RONDA===")
+            else:
+                j1.vida = j1.vida - j2.ataque
+                turno = 1
+                print(f"{j2.nombre} ataca, {j1.nombre} ahora tiene {j1.vida} de vida")
+                if j1.vida > 0:
+                    print("\n===PROXIMA RONDA===")
+
+        # Consultamos si el Pokemon 1 perdió
+        if j1.vida <= 0:
+            j2.gano()
+        else:  # Sino significa que el Pokemon 1 gano
+            j1.gano()
+
+        print()
+
+        print("¿Volvés a jugar? [s/n]")
+        volver = input(">")
+
+        if volver == "s":
+            juego()
+        elif volver == "n":
+            print("GRACIAS, has finalizado el juego")
+            break
+        elif volver != "s" or "n":
+            print("error\n")
+            print("¿Volvés a jugar? [s/n]")
+            print(input(">"))
+
+
+juego()
+
+
+# TAREA
+# 1 Agregar un ciclo infinito que nos permita iniciar más batallas (OK)
+# 2 Agregar más Pokemons y permitir al usuario elegir cuál utilizar (OK)
+# 3 No pueden usar el mismo pokemon los 2 jugadores (OK)
+# 4 La clase Pokemon estuviera en otro módulo (OK)
+
+# Opcional:
+# Agregar clases a los pokemon (Tierra, Electricidad, Fuego, Agua) (OK)
+# y darle a cada clase superioridad ante otras clases (OK)
+# por ejemplo, si Pokemon 1 es de agua, y Pokemon 2 es de fuego
+# que el Pokemon 1 le reste ataque * 1.5
+# así mismo que el Pokemon 2 le reste solo ataque menos el 25%
