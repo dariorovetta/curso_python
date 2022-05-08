@@ -1,0 +1,57 @@
+# BUSQUEDA BINARIA
+
+lista = [0, 88, 72, 21, 14, 16, 90, 35, 47, 6, 68, 12, 10, 54, 41]
+
+# sort = ordenar en (ingles), ordena los numeros
+lista.sort()
+print(lista)
+
+# print(len(lista))  # len() nos indica la cantidad de índices
+
+# 1.º buscar el punto medio (puntero)
+# 2.º comprobar si el punto medio es el valor que buscamos
+# 3.º si el número es menor al valor que buscamos aumentamos inicio 1 sobre puntero
+# 4.º si el número es mayor al valor que buscamos disminuimos el final 1 bajo el puntero
+# 5.° si inicio es mayor o igual que final, entonces el valor no se encuentra en la lista
+
+
+def busqueda_binaria(valor):
+    inicio = 0
+    final = len(lista) - 1
+    while inicio <= final:
+        puntero = (inicio + final) // 2
+        if valor == lista[puntero]:
+            return puntero
+        elif valor > lista[puntero]:
+            inicio = puntero + 1
+        else:
+            final = puntero - 1
+    return None
+
+
+def buscar_valor(valor):
+    res_busqueda = busqueda_binaria(valor)
+    if res_busqueda is None:
+        return f"El número {valor} no fue encontrado"
+    else:
+        return f"El número {valor} se encuentra en la posición {res_busqueda}"
+
+
+while True:
+
+    print(buscar_valor(int(input("Ingresa el valor que quieras buscar: \n"))))
+
+    print("\nIngresa (1) para buscar otro valor")
+    print("Ingresa (2) para detener la búsqueda")
+    opcion = input(">")
+
+    if opcion == "1":
+        print()
+    if opcion == "2":
+        print("GRACIAS, has finalizado la búsqueda")
+        break
+
+# TAREA:
+# Realizar las modificaciones al código para poder ingresar los valores directamente desde consola (OK)
+# agregar un ciclo infinito para realizar todas las búsquedas que queramos (OK)
+# y poder terminar el ciclo (OK)
