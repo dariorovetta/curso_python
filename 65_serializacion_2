@@ -1,0 +1,35 @@
+import pickle
+from estudiantes import Estudiante
+
+# SERIALIZAR OBJETOS
+
+est1 = Estudiante("Marcos", 35, "Python")
+est2 = Estudiante("Carla", 19, "JS")
+est3 = Estudiante("Pedro", 26, "C#")
+
+lista_est_obj = [
+    est1,
+    est2,
+    est3
+]
+
+"""
+archivo_est_obj = open("estudiantes_obj", "wb")  # Creamos un archivo para guardar el estado
+# "wb" = Permisos que le vamos a dar. "w" de Escritura. "b" de Binario.
+
+pickle.dump(lista_est_obj, archivo_est_obj)  # Volcamos el contenido de la lista en el archivo
+# "dump" es Volcar en (Ingles)
+# dump = tira el contenido de la lista (en este caso) en Pickle para que lo serialice
+
+archivo_est_obj.close()  # "close()" cierra el archivo creado
+del archivo_est_obj  # "del" elimina el archivo creado
+"""
+
+archivo_est = open("estudiantes_obj", "rb")
+
+lista_estudiantes_obj = pickle.load(archivo_est)
+
+for e in lista_estudiantes_obj:
+    print(e)  # e Nos imprime los datos guardados
+    print(e.nombre)  # .nombre nos imprime los nombres de los estudiantes
+    print(e.info())  # .info() nos imprime la información de cada estudiante
