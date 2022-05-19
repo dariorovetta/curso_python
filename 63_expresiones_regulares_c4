@@ -1,0 +1,99 @@
+import re
+
+# Clase 4 - Rangos, Rango Negado, Clases Predefinidas, Cuantificadores y Otros Metacaracteres
+
+cadena = "abcdef ghi" \
+         "0123456789-" \
+         "hola por dos"
+
+# Rangos []
+
+# [a-d] esto significaría que buscamos cualquier letra comprendida entre a y d es decir "abcd"
+print(re.findall("[a-d]", cadena))
+print()
+
+# [0-7] esto significaría que buscamos cualquier número comprendido entre 0 y 7 es decir "01234567"
+print(re.findall("[0-7]", cadena))
+print()
+
+# Rango Negado ^ (Que busque todo lo que no esta en en ese rango)
+print(re.findall("[^0-7]", cadena))
+print()
+
+# Clases Predefinidas
+
+# \d corresponde a [0-9]
+print(re.findall("[\d]", cadena))
+print()
+
+# \D corresponde a [^0-9]
+print(re.findall("[\D]", cadena))
+print()
+
+# \s corresponde a espacios en blanco (espacio, tabulaciones, nuevas lineas...) [ \t\n\r\f\v]
+print(re.findall("[\s]", cadena))
+print()
+
+# \S corresponde a cualquier carácter que no sea espacios en blanco [^\t\n\r\f\v]
+print(re.findall("[\S]", cadena))
+print()
+
+# \w todas las letras minus., mayus., números y guiones bajos [a-zA-Z0-9_]
+print(re.findall("[\w]", cadena))
+print()
+
+# \W coincide con cualquier carácter no alfanumérico [^a-zA-Z0-9_]
+print(re.findall("[\W]", cadena))
+print()
+
+"""
+CUANTIFICADORES
+
+Son caracteres que multiplican el patrón que les precede.
+Mientras que con las clases de caracteres podemos buscar un dígito, o una letra;
+con los cuantificadores podemos buscar cero o más letras, al menos 7 dígitos, o entre tres y
+cinco letras mayúsculas.
+Los cuantificadores son:
+
+?: coincide con cero u una ocurrencia del patrón. Dicho de otra forma, hace que el patrón sea opcional
++: coincide con una o más ocurrencias del patrón.
+*: coincide con cero o más ocurrencias del patrón.
+{X}: coincide con exactamente x ocurrencias del patrón
+{X, Y}: coincide con al menos x y no más de y ocurrencias. Si se omite x, el mínimo es cero, y si se omite
+Ejemplos:
+
+"""
+
+# .* cualquier cadena, de cualquier largo (incluyendo una cadena vacía)
+print(re.findall("[.*]", cadena))
+print()
+
+# [a-z]{3,6} entre 3 y 6 letras minúsculas
+print(re.findall("[a-z]{3,6}", cadena))
+print()
+
+# [\d]{4} al menos 4 digitos
+print(re.findall("[\d]{4}", cadena))
+print()
+
+# [.*hola!?] una cadena cualquiera, seguida de hola, y terminando (o no) con un !
+print(re.findall("[.*hola!?]", cadena))
+print()
+
+"""
+OTROS METACARACTERES
+Existen otros metacaracteres en el lenguaje de las expresiones regulares:
+
+?: Además de servir como cuantificador, puede modificar el comportamiento de otro.
+De forma predeterminada, un cuantificador coincide con la mayor cadena posible.
+Cuando se lo coloca co un ?, se indica qye se debe coincidir con la menor cadena posible.
+Esto es: dada la cadena bbbbb, b+ coincide con la cadena entera, mientras que b+? coincide solo con la b.
+Es decir, la menor cadena que cumple el patrón.
+
+(): agrupan patrones. Sirven para que aquel pedazo de la cadena que coincida con el patrón sea capturado;
+o para delimitar el alcance de un cuantificador. 
+Ejemplo: ab+ coincide con ab, abb, abbbbb, ... .
+Mientras que (ab)+ coincide con ab, abab, abab...
+
+| : permite definir opciones para el patrón: perro|gato coincide con perro y con gato
+"""
