@@ -1,0 +1,68 @@
+# EXPRESIONES REGULARES o REGEX
+
+# Módulos re
+
+"""
+Las expresiones regulares nos permiten trabajar con textos, más específicamente para
+realizar búsquedas de texto a través de métodos y utilizando una sintaxis propia
+de la librería de expresiones regulares que utilicemos en cada lenguaje. Normalmente
+la sintaxis utilizada para los patrones de búsqueda es compartida por la mayoría de
+los lenguajes de programación.
+
+PODEMOS UTILIZAR EXPRESIONES REGULARES PARA:
+- Saber si existe una cadena de caracteres (palabra) dentro de un texto
+- Conocer cuantas veces se encuentra una cadena de caracteres dentro de un texto
+- Detectar si un texto se ajusta a un formato específico por ejemplo un
+correo electrónico "texto" "@" "texto" "." "com" "." "ar"
+- etc...
+"""
+
+import re
+
+# Clase 1 - re.search
+
+# Este método nos buscará la primera coincidencia de una cadena de caracteres dentro de un texto
+# devolverá un objeto si es localizado o None si no es encontrado
+
+"""
+cadena = "Hola estudiantes de AcademiaCoder."
+
+a_buscar = "estudiantes"
+
+print(re.search(a_buscar, cadena))
+
+if re.search(a_buscar, cadena):
+    print("Se ha encontrado")
+else:
+    print("No se ha encontrado")
+"""
+
+# (search) Escanea una cadena, buscando cualquier ubicación donde coincida este RE.
+
+
+cadena = "Hola estudiantes de AcademiaCoder."
+
+a_buscar = "estudiantes"
+
+buscado = re.search(a_buscar, cadena)
+
+print(buscado)
+print(buscado.group())
+# Retorna la cadena de caracteres que coincide con la RE
+
+print(buscado.start())
+# (Start())Retorna la posición de inicio de la coincidencia
+
+print(buscado.end())
+# Retorna la posición final de la coincidencia
+
+print(buscado.span())
+# Retorna una tupla que contiene (inicio, final) las posiciones de coincidencia
+"""
+Sale impreso lo siguiente:
+
+re.Match object; span(5, 16), match='estudiantes'
+
+span(5, 16) indica que la palabra inicia en el lugar 5 y 
+el 16 indica que la palabra termina en el 15 y se le agrega un espacio vacío.
+"""
