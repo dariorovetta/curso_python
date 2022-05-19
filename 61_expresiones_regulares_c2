@@ -1,0 +1,35 @@
+# EXPRESIONES REGULARES O REGEX
+
+import re
+
+# Clase 2 - re.findall, re.split, re.sub
+# En esta clase aprenderemos a utilizar estos métodos de la librería re
+
+cadena = "Hola estudiantes de AcademiaCoder. En AcademiaCoder los estudiantes aprenderán programación"
+
+cadena2 = """
+Hola estudiantes de AcademiaCoder.
+En AcademiaCoder los estudiantes aprenderán programación.
+Recuerden que nos centramos en el Desarrollo Web
+"""
+
+a_buscar = "estudiantes"
+
+re_findall = re.findall(a_buscar, cadena)
+print(re_findall)
+# (findall) Encuentra todas las subcadenas de caracteres donde coincide la RE y las retorna como una lista.
+
+re_split = re.split(a_buscar, cadena)
+print(re_split)
+
+re_split = re.split("\s", cadena)  # \s es espacio en blanco
+print(re_split)
+# (split) Divide la cadena de caracteres en una lista, dividiéndola donde coincida la RE
+
+re_sub = re.sub(a_buscar, "desarrolladores", cadena)
+print(re_sub)
+
+print(cadena2)
+
+# (sub) Encuentra todas las subcadenas de caracteres donde coincida la RE y
+# las reemplaza con una cadena de caracteres diferente
