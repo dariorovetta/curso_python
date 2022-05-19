@@ -1,0 +1,46 @@
+# SERIALIZACIÓN
+
+"""
+Serialización es el proceso de convertir un objeto en una secuencia de bytes para almacenarlo
+o transmitirlo a la memoria, a una base de datos o a un archivo.
+Su propósito principal es guardar el estado de un objeto para poder volver a crearlo cuando sea
+necesario. El proceso inverso se denomina deserialización.
+
+FUENTE: https://docs.microsoft.com/es-es/dotnet/csharp/programming-guide/concepts/serialization/
+"""
+
+# PARA SERIALIZAR EN PYTHON UTILIZAREMOS LA LIBRERÍA "PICKLE"
+
+import pickle
+
+"""
+# 1. SERIALIZAR COLECCIONES
+estudiantes = [
+    "Marcos",
+    "Carla",
+    "Agustin",
+    "Pedro",
+    "Maria"
+]
+
+archivo_serializado = open("estudiantes", "wb")  # Creamos un archivo para guardar el estado
+# "wb" = Permisos que le vamos a dar. "w" de Escritura. "b" de Binario.
+
+pickle.dump(estudiantes, archivo_serializado)  # Volcamos el contenido de la lista en el archivo
+# "dump" es Volcar en (Ingles)
+# dump = tira el contenido de la lista (en este caso) en Pickle para que lo serialice
+
+archivo_serializado.close()  # "close()" cierra el archivo creado
+del archivo_serializado  # "del" elimina el archivo creado
+"""
+
+archivo = open("estudiantes", "rb")  # "rb" = Lectura Binaria. "r" Lectura. "b" Binaria
+
+lista_estudiantes = pickle.load(archivo)
+# "load" es cargar en (ingles).
+# load = carga el contenido del archivo
+
+print(lista_estudiantes)
+
+for e in lista_estudiantes:
+    print(e)
