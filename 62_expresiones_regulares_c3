@@ -1,0 +1,51 @@
+import re
+
+# Clase 3 - (Sintaxis de RegEx)
+
+# Anclas (^, $)
+# Metacarácteres ([])
+
+# ^ = Caret
+
+lista = [
+    "Marcos - Python",
+    "Carlos - JavaScript",
+    "Ana - JavaScript",
+    "Marcos - PHP",
+    "Natalia - Vue",
+    "Violeta - Python",
+    "Ana - Vue",
+    "Carla - PHP",
+    "Marcos - Programacion",
+    "Benicio - Programación"
+]
+
+"""
+for linea in lista:
+    if re.findall("^Marcos", linea):
+        print(linea)
+        
+# ^ = Que busque todos elementos que empiecen con
+"""
+
+"""
+for linea in lista:
+    if re.findall("Python$", linea):
+        print(linea)
+
+# $ = Que busque todos los elementos que terminen con
+"""
+
+
+for linea in lista:
+    if re.findall("[A]", linea):
+        print(linea)
+
+# [] = Set de carácteres
+# Busca todas las palabras que tengan los caracteres incluidos entre los []
+
+for linea in lista:
+    if re.findall("Programaci[oó]n", linea):
+        print(linea)
+# De esta forma se busca una palabra pero tenga o no tilde.
+# Es como si fuera un "comodín"
